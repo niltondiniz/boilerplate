@@ -1,7 +1,7 @@
 # Boilerplate
 
   ### Running API
-  To run API run docker-compose up -d
+  To run API: docker-compose up -d
   
   ### Running Websockets
   1. Driver WebSocket: yarn start_driver
