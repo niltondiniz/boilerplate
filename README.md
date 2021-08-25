@@ -1,4 +1,4 @@
-# Boilerplate (framework) de desenvolvimento
+# Boilerplate
 
   ### Running API
   To run API run docker-compose up -d
