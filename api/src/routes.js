@@ -17,7 +17,7 @@ routes.post('/command-passenger-events', async (req, res) => {
 
   request.post({
     headers: { 'Content-type': 'application/json', 'Accept': 'application/json' },
-    url: 'http://localhost:8088/ksql',
+    url: 'http://ksqldb-server:8088/ksql',
     body: JSON.stringify(data)
   }, function (error, response, body) {    
     return res.json({ ok: body })
@@ -38,7 +38,7 @@ routes.post('/command-driver-events', async (req, res) => {
 
   request.post({
     headers: { 'Content-type': 'application/json', 'Accept': 'application/json' },
-    url: 'http://localhost:8088/ksql',
+    url: 'http://ksqldb-server:8088/ksql',
     body: JSON.stringify(data)
   }, function (error, response, body) {
     console.log(body)

@@ -3,7 +3,7 @@ import { Kafka, logLevel } from 'kafkajs';
 var logger = require('tracer').console();
 
 const kafka = new Kafka({
-    clientId: 'api',
+    clientId: 'ws_passenger',
     brokers: ['localhost:9092'],
     logLevel: logLevel.NOTHING,
     retry: {
@@ -12,7 +12,7 @@ const kafka = new Kafka({
     },
   });
 
-export const passengerConsumer = kafka.consumer({ groupId: 'request-trip-group-consumer' })
+export const passengerConsumer = kafka.consumer({ groupId: 'passenger_group' })
 
 const wss = new WebSocketServer({ port: 8002 });
 
@@ -25,7 +25,7 @@ wss.on('connection', async function connection(ws, req) {
     await passengerConsumer.run({
         eachMessage: async ({ topic, partition, message }) => {
             logger.info('Response', String(message.value));
-            ws.send(JSON.stringify(message.value))
+            ws.send(String(message.value))
         },
     });
 

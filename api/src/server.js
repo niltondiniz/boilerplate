@@ -1,6 +1,8 @@
 import express from 'express';
 import routes from './routes';
 
+require('dotenv').config()
+
 const app = express();
 const swaggerUi = require('swagger-ui-express')
 const swaggerFile = require('../swagger_output.json')
@@ -16,7 +18,7 @@ app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 async function run() {  
 
   app.listen(port);
-  logger.info('Server is running on http://localhost:8000')
+  logger.info('Server is running on http://localhost:' + port)
 }
 
 run().catch(console.error)
