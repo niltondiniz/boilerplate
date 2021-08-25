@@ -9,6 +9,9 @@
   
   - Driver WebSocket runnning on 8001 port
   - Passenger WebSocket runnning on 8002 port
+
+  ### KSQL Streams
+  To create KSQL Streams see: Queries KSQL.sql 
    
   ### API Docs
   1. http://localhost:8000/doc
