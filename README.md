@@ -1,16 +1,42 @@
-# Boilerplate (framework) de desenvolvimento
+# Boilerplate
 
-  ### Todos os boilerplates devem conter a especificação do container que deverá ser executado (Dockerfile e docker-compose)
+  ### Running API
+  To start API: docker-compose up -d
   
-  ### Todos os boilerplates devem conter exemplo de criação de uma API Rest - OK
+  ### Running Websockets
+  Driver WebSocket: yarn start_driver  
+  Passenger WebSocket: yarn start_passenger
   
-  ### Para comunicação async, deverá conter um exemplo de conexão async - OK
+  - Driver WebSocket runnning on 8001 port
+  - Passenger WebSocket runnning on 8002 port
+   
+  ### API Docs
+  1. http://localhost:8000/doc
+
+  ### API Status
+  1. http://localhost:8000/health  
+
+  ### Endpoints
+  
+  #### Request Trip Preview
+    GET: http://localhost:8000/request-trip-preview
     
-  ### Todos os boilerplates devem conter exemplo de comunicação com o Kafka (consumer e producer) - OK
+  #### Driver: Update Position
+    POST: http://localhost:8000/command-driver-events?event=ATUALIZACAO_POSICAO
     
-  ### Para API REst, deve gerar automaticamente o arquivo de specificação openapi (json ou yml) - OK
-
-  ### Todos os boilerplates devem conter mecanismo de verificação de saúde do serviço - OK
+  #### Driver: Accept Trip
+    POST: http://localhost:8000/command-driver-events?event=ACEITAR_CORRIDA
+    
+  #### Passenger: Request Trip
+    POST: http://localhost:8000/command-passenger-events?event=SOLICITACAO_CORRIDA
+    
+  #### Driver: Done
+    POST: http://localhost:8000/command-driver-events?event=CHEGADA_AO_DESTINO
+    
+  #### Driver: Cancel Trip
+    POST: http://localhost:8000/command-driver-events?event=CANCELAR_CORRIDA
+    
   
-
-  ### Todos os boilerplates devem conter o mecanismo de monitoramento (logs e trace) em seus exemplos - OK
+    
+  
+  
