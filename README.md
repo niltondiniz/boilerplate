@@ -4,10 +4,11 @@
   To start API: docker-compose up -d
   
   ### Running Websockets
-  1. Driver WebSocket: yarn start_driver
-    Port: 8001
-  2. Passenger WebSocket: yarn start_passenger  
-    Port: 8002
+  Driver WebSocket: yarn start_driver  
+  Passenger WebSocket: yarn start_passenger
+  
+  Driver WebSocket runnning on 8001 port
+  Passenger WebSocket runnning on 8002 port
    
   ### API Docs
   1. http://localhost:8000/doc
