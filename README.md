@@ -21,6 +21,8 @@
 
   ### Endpoints
   
+  Import Insomnia.json file to Insomnia
+  
   #### Request Trip Preview
     GET: http://localhost:8000/request-trip-preview
     
