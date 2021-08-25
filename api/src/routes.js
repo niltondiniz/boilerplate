@@ -48,7 +48,7 @@ routes.post('/command-driver-events', async (req, res) => {
 
 });
 
-routes.post('/request-trip-preview', async (req, res) => {
+routes.get('/request-trip-preview', async (req, res) => {
 
   var id = uuidv4();
   const message = {

@@ -5,4 +5,4 @@ COPY api/package*.json .
 RUN npm install -g nodemon
 RUN npm install
 COPY ./api .
-CMD [ "npm", "run", "swagger-autogen" ]
+CMD npm run swagger-autogen
