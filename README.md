@@ -1,16 +1,15 @@
 # Boilerplate (framework) de desenvolvimento
 
-  ### Todos os boilerplates devem conter a especificação do container que deverá ser executado (Dockerfile e docker-compose)
+  ### Running API
+  To run API run docker-compose up -d
   
-  ### Todos os boilerplates devem conter exemplo de criação de uma API Rest - OK
-  
-  ### Para comunicação async, deverá conter um exemplo de conexão async - OK
+  ### Running Websockets
+  1. Driver WebSocket: yarn start_driver
+  2. Passenger WebSocket: yarn start_passenger  
     
-  ### Todos os boilerplates devem conter exemplo de comunicação com o Kafka (consumer e producer) - OK
-    
-  ### Para API REst, deve gerar automaticamente o arquivo de specificação openapi (json ou yml) - OK
+  ### API Docs
+  1. http://localhost:8000/doc
 
-  ### Todos os boilerplates devem conter mecanismo de verificação de saúde do serviço - OK
+  ### API Status
+  1. http://localhost:8000/health  
   
-
-  ### Todos os boilerplates devem conter o mecanismo de monitoramento (logs e trace) em seus exemplos - OK
